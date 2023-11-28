@@ -1,8 +1,7 @@
 import { useCore } from '../../store/useCore'
 
-export default function Excel2Json(prop) {
+export default function Excel2Json() {
   const { handleExcelToJson } = useCore()
-  console.log('prop: ', prop)
   return (
     <div>
       Excel2Json, 注意仅支持一个工作簿
