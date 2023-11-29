@@ -1,5 +1,5 @@
-const download = ({file, fileType, fileName, outputType}) => {
-  const blob = new Blob([file], {type: fileType})
+const download = ({ file, fileType, fileName, outputType }) => {
+  const blob = new Blob([file], { type: fileType })
 
   // 创建一个下载链接
   const downloadLink = document.createElement('a')
@@ -10,4 +10,4 @@ const download = ({file, fileType, fileName, outputType}) => {
   downloadLink.click()
 }
 
-export {download}
+export { download }
