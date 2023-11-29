@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import ErrorPage from './error-page'
 import Processor from './routes/processor.jsx'
-
 import Root from './routes/root'
-
+import 'virtual:uno.css'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 const router = createBrowserRouter([
   {
     path: '/',
