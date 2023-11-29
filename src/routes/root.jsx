@@ -13,7 +13,9 @@ export default function Root() {
                 <NavLink
                   to={`part/${item.id}`}
                   className={({ isActive }) =>
-                    isActive ? 'is-nav-active nav-item' : 'nav-item'
+                    isActive
+                      ? 'is-nav-active nav-item p-2 bg-white '
+                      : 'nav-item p-2 hover:bg-white'
                   }>
                   {item.label}
                 </NavLink>
@@ -26,7 +28,7 @@ export default function Root() {
           </p>
         )}
       </div>
-      <div className="detail">
+      <div className="detail m-10">
         <Outlet />
       </div>
     </div>
