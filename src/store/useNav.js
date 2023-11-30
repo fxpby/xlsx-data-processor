@@ -17,7 +17,12 @@ export const useNav = create(() => ({
     },
     {
       id: '3',
-      label: '筛选导出 Excel',
+      label: '单文件筛选列处理',
+      component: Filter,
+    },
+    {
+      id: '4',
+      label: '多文件筛选列处理',
       component: Filter,
     },
   ],
