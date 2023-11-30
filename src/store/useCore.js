@@ -19,7 +19,7 @@ const handleExcelToJson = async ({ e, downloadable = true, dom }) => {
   }
 }
 
-const handleJsonToExcel = async (e) => {
+const handleJsonToExcel = async ({ e }) => {
   const selectedFile = e.target.files[0]
   await processJsonToExcel({ file: selectedFile })
 }
@@ -50,7 +50,7 @@ export const useCore = create((set, get) => ({
       }),
     )
     if (downloadable) {
-      get().processJsonToExcel({ json: newJson })
+      processJsonToExcel({ json: newJson })
     } else {
       dom.innerHTML = JSON.stringify(newJson, null, 2)
     }
