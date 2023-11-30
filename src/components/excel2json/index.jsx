@@ -18,8 +18,7 @@ export default function Excel2Json() {
   }
   return (
     <div>
-      {currentRadio}
-      <PButton onClick={() => clickButton()}>点击上传Excel文件</PButton>
+      <PButton onClick={() => clickButton()}>点击选择Excel文件</PButton>
       <input
         style={{ display: 'none' }}
         type="file"
@@ -37,7 +36,8 @@ export default function Excel2Json() {
       <div className="my-10">
         Excel2Json, 注意仅支持一个工作簿(后续可支持多工作簿)
       </div>
-      <div className="flex">
+      <span>选择文件后执行操作：</span>
+      <div className="flex my-4">
         <RadioGroup />
       </div>
       <div className="my-10" ref={displayDom}></div>

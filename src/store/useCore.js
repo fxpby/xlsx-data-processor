@@ -27,7 +27,25 @@ const handleJsonToExcel = async (e) => {
   await processJsonToExcel({ file: selectedFile })
 }
 
-export const useCore = create(() => ({
+const handleDisplayColumn = async ({ e, dom }) => {
+  const selectedFile = e.target.files[0]
+  const res = await processExcelToJson({ file: selectedFile })
+}
+
+export const useCore = create((set) => ({
+  currentColumns: [],
+  currentJson: [],
   handleExcelToJson,
   handleJsonToExcel,
+  handleDisplayColumn: async ({ e, dom }) => {
+    const selectedFile = e.target.files[0]
+    const res = await processExcelToJson({ file: selectedFile })
+    console.log('Object.keys(res[0][0]): ', Object.keys(res[0][0]))
+
+    set(() => ({
+      currentColumns: Object.keys(res[0][0]),
+      currentJson: res[0],
+    }))
+  },
+  handleFilterData: () => {},
 }))

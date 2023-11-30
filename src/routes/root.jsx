@@ -4,8 +4,11 @@ import './root.less'
 export default function Root() {
   const { navList } = useNav()
   return (
-    <div className="processor-wrapper">
+    <div className="processor-wrapper min-h-screen">
       <div className="sidebar">
+        <div className="my-10 flex items-center justify-center">
+          Excel 数据处理工厂
+        </div>
         {navList.length ? (
           <ul>
             {navList.map((item) => (
@@ -29,6 +32,7 @@ export default function Root() {
         )}
       </div>
       <div className="detail m-10">
+        <div className="my-5">请点击切换左侧导航进入不同数据处理工厂</div>
         <Outlet />
       </div>
     </div>
