@@ -1,7 +1,6 @@
 import './index.less'
 export default function PButton(prop) {
   const { children, onClick, className } = prop
-  console.log('classNames: ', className)
 
   const handleClick = (e) => {
     e.stopPropagation()

@@ -10,7 +10,7 @@ export default function Root() {
           Excel 数据处理工厂
         </div>
         {navList.length ? (
-          <ul>
+          <ul className="list-none pl-0 flex flex-col items-center">
             {navList.map((item) => (
               <li key={item.id}>
                 <NavLink
