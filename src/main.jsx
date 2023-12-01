@@ -7,19 +7,22 @@ import 'virtual:uno.css'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: 'part/:id',
-        element: <Processor />,
-      },
-    ],
-  },
-])
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: 'part/:id',
+          element: <Processor />,
+        },
+      ],
+    },
+  ],
+  { basename: '/xlsx-processor' },
+)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
